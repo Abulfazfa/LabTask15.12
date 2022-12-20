@@ -17,11 +17,12 @@ namespace LabTask15._12
         {
             Student student = new Student();
             student.studentList.Add(student);
+
             switch (num)
             {
                 case 1:
                     Console.WriteLine("Please enter student's fullname");
-                    student.FullName = Console.ReadLine();       
+                    student.FullName = Console.ReadLine();
                     break;
                 case 2:
                     Console.WriteLine("Please enter student's number, fullname and point");
@@ -29,27 +30,33 @@ namespace LabTask15._12
                     string name = Console.ReadLine();
                     int point = Convert.ToInt32(Console.ReadLine());
                     student.AddExam(no, name, point);
-                    break ;
+                    break;
                 case 3:
                     Console.WriteLine("Please enter student's number and fullname");
-                    student.GetExamResult(student.No, student.FullName);
-                    break ;
+                    no = Convert.ToInt32(Console.ReadLine());
+                    name = Console.ReadLine();
+                    student.GetExamResult(no, name);
+                    break;
                 case 4:
                     Console.WriteLine("Please enter student's number");
-                    student.GetExamsResults(student.No);
+                    no = Convert.ToInt32(Console.ReadLine());
+                    student.GetExamsResults(no);
                     break;
                 case 5:
                     Console.WriteLine("Please enter student's number");
-                    Console.WriteLine(student.GetExamAvg(student.No));
+                    no = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine(student.GetExamAvg(no));
                     break;
                 case 6:
                     Console.WriteLine("Please enter student's number and fullname");
-                    Console.WriteLine(student.RemoveExam(student.No, student.FullName)); 
+                    no = Convert.ToInt32(Console.ReadLine());
+                    name = Console.ReadLine();
+                    Console.WriteLine(student.RemoveExam(no,name));
                     break;
                 case 0:
-                    
-                    break;             
-                default:          
+
+                    break;
+                default:
                     break;
             }
         }

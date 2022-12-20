@@ -50,7 +50,7 @@ namespace LabTask15._12
             {
                 if (no == item.No)
                 {
-                  return Exams.Average(a => a.Value);
+                  return item.Exams.Average(a => a.Value);
                 }
             }
             return -1;
