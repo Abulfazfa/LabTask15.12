@@ -17,14 +17,11 @@ namespace LabTask15._12
         public Student()
         {
             Exams = new Dictionary<string, int>();
-        }
-        
-
+        } 
         public void AddExam(int no, string name, int point)
         {
             Exams.Add(name, point);
         }
-
         public void GetExamResult(int no, string name)
         {
             foreach (var student in studentList)
@@ -40,8 +37,7 @@ namespace LabTask15._12
                         }
                     }
                 }
-            }
-            
+            }  
         }
  
         public double GetExamAvg(int no)
@@ -54,7 +50,6 @@ namespace LabTask15._12
                 }
             }
             return -1;
-           
         }
 
         public void GetExamsResults(int no)
@@ -89,10 +84,6 @@ namespace LabTask15._12
                 }
             }
             return null;
-
-
-        }
-
-    
+        }    
     }
 }
